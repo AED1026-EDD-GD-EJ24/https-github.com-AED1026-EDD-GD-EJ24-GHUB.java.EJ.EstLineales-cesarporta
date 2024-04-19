@@ -3,9 +3,11 @@
 ./miPrincipal/DemoCola.java
 ./miPrincipal/DemoDelimitadores.java
 ./miPrincipal/Cola.java
+./miPrincipal/ListaDeContactos.java
 ./miPrincipal/DemoQueue.java
 ./miPrincipal/Persona.java
 ./miPrincipal/DemoLinkedListCuadrupedos.java
+./miPrincipal/Contacto.java
 ./miPrincipal/DemoEstCombinada.java
 ./miPrincipal/DemoStack.java
 ./miPrincipal/Hashtable2.java
@@ -22,4 +24,5 @@
 ./miPrincipal/Nodo.java
 ./miPrincipal/Lista.java
 ./miPrincipal/DemoPila.java
+./miPrincipal/DemoListaDeContactos.java
 ./personas/Persona.java
