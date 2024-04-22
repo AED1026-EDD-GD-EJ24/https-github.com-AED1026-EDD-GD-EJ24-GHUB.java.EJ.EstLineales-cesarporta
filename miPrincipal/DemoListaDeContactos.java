@@ -48,6 +48,37 @@ public class DemoListaDeContactos {
             System.out.println(listado.getValor(i));
         }
 
+        //Agregar un contacto que ya existe
+
+        if(ldc.agregarContactos("Maria Andrea","Vargas",
+            " C11 No 705 Mazatlan", "mariv@gmail.com",
+            "6677121429","6677306142"))
+           System.out.println("Elemento Agregado");
+        else
+           System.out.println("No se pudo agregar");
+
+        //eliminar un elemento que no existe
+        if(ldc.eliminaContacto("Fernando", "Castro")){
+            System.out.println("Contacto Eliminado");
+        }
+
+        //Modificar contacto que no existe, por lo tanto no se realiza
+        ldc.modificarContacto("Federico","Cardenas","laguna de viezca 705 mazatlan",
+        "fede@gmail.com","6677161111","6677921456");
+
+        listado = ldc.mostrarTodosLosContactos();
+        System.out.println("--- Listado después de la modificación ---");
+        for(int i=0;i<listado.getTamanio();i++){
+            System.out.println(listado.getValor(i));
+        }
+
+        Contacto con = ldc.buscarContacto("Maria Andrea", "Vargas");
+        System.out.println("Elemento buscado = "+con);
+
+        con = ldc.buscarContacto("Mario Andres", "Vargas");
+        System.out.println("Elemento buscado = "+con);
+
+
 
         
     }
