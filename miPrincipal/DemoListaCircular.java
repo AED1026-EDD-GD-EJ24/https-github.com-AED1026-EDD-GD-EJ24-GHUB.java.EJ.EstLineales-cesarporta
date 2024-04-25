@@ -5,7 +5,7 @@ public class DemoListaCircular {
         System.out.println("************************");
         System.out.println("      LISTA CIRCULAR    ");
         System.out.println("************************");
-        System.err.println();
+        System.out.println();
         ListaCircular<Integer> lc = new ListaCircular<Integer>();
         lc.agregar(30);
         lc.agregar(40);

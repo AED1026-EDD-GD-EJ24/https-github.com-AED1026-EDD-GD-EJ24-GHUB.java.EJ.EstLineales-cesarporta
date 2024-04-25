@@ -25,6 +25,7 @@ public class Principal {
             System.out.println("13) Lista de Contactos");
             System.out.println("14) Lista Doblemente Ligada");
             System.out.println("15) Lista Circular");
+            System.out.println("16) Lista Doble Circular");
 
 
             System.out.println();
@@ -72,8 +73,13 @@ public class Principal {
                      break;
                 case 14:
                      DemoListaDobleLigada.menu();
+                     break;
                 case 15:
                      DemoListaCircular.menu();
+                     break;
+                case 16:
+                     DemoListaDobleCircular.menu();
+                     break;
                 case 0:
                     System.out.println("ADIOS!");
                     //consola.close();

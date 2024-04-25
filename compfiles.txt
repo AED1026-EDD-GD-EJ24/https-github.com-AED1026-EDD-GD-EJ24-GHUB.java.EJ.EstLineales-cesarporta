@@ -12,6 +12,7 @@
 ./miPrincipal/DemoEstCombinada.java
 ./miPrincipal/DemoStack.java
 ./miPrincipal/Hashtable2.java
+./miPrincipal/listaDoble/ListaDobleCircular.java
 ./miPrincipal/listaDoble/ListaDoblementeEnlazada.java
 ./miPrincipal/listaDoble/Nodo.java
 ./miPrincipal/PosicionIlegalException.java
@@ -23,6 +24,7 @@
 ./miPrincipal/Pila.java
 ./miPrincipal/DemoArrayListPersonas.java
 ./miPrincipal/Delimitadores.java
+./miPrincipal/DemoListaDobleCircular.java
 ./miPrincipal/DemoArrayListyLinkedList.java
 ./miPrincipal/Principal.java
 ./miPrincipal/Nodo.java
