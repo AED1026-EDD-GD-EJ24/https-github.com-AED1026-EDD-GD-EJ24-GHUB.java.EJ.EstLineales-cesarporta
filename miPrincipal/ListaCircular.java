@@ -7,7 +7,7 @@ public class ListaCircular<T> {
     // total de elementos en la lista
     private int tamanio;
     //Constructor por defecto
-    public Lista(){
+    public ListaCircular(){
         cabeza= null;
         tamanio = 0;
     }
@@ -27,14 +27,18 @@ public class ListaCircular<T> {
         Nodo<T> nuevo = new Nodo<T>();
         nuevo.setValor(valor);
         if (esVacia()){
+            //Como hay un solo nodo, el siguiente apunta al mismo nodo
+            nuevo.setSiguiente(nuevo);
             cabeza = nuevo; 
         }else{  
             //agregar al final de la lista  
             Nodo<T> aux = cabeza;
-            while(aux.getSiguiente()!=null){
+            while(aux.getSiguiente()!=cabeza){
                 aux = aux.getSiguiente();
             }   
             aux.setSiguiente(nuevo);
+            //Enlaza el ultimo nodo con el primero
+            nuevo.setSiguiente(cabeza);
         }
         tamanio++;
 
@@ -45,17 +49,27 @@ public class ListaCircular<T> {
             nuevo.setValor(valor);
             //el nuevo nodo se inserta al inicio de la lista
             if(pos==0){
+                //buscar el ultimo
+                Nodo<T> ultimo = cabeza;
+                while(ultimo.getSiguiente() != cabeza){
+                    ultimo = ultimo.getSiguiente();
+                }
+
                 nuevo.setSiguiente(cabeza);
                 cabeza = nuevo;
+                //enlazar el utimo con el primero
+                ultimo.setSiguiente(cabeza);
             }
             else{
                 //el nuevo nodo se inserta al final de la lista
                 if(pos==tamanio){
                     Nodo<T> aux = cabeza;
-                    while(aux.getSiguiente()!=null){
+                    while(aux.getSiguiente()!=cabeza){
                         aux = aux.getSiguiente();
                     }
                     aux.setSiguiente(nuevo);
+                    //enlazar el ultimo con el primero
+                    nuevo.setSiguiente(cabeza);
                 }
                 else{
                     //el nuevo nodo se inserta en cualquier posicion de la lista
@@ -106,7 +120,15 @@ public class ListaCircular<T> {
         if(pos>=0 && pos<tamanio){
             if (pos==0){
                 //el nodo a eliminar esta en la primera posicion
+                //Buscar el ultimo nodo para enlazarlo
+                Nodo<T> ultimo = cabeza;
+                while(ultimo.getSiguiente() !=cabeza){
+                    ultimo= ultimo.getSiguiente();
+                }
+                //dezplazamos la cabeza al siguiente nodo
                 cabeza= cabeza.getSiguiente();
+                //Enlazar el ultimo con la nueva cabeza
+                ultimo.setSiguiente(cabeza);
                 tamanio--;
             }
             //se elimina en medio y al final
